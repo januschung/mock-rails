@@ -1,5 +1,4 @@
 require "test_helper"
-require 'rspec-parameterized'
 
 class HttpStatusControllerTest < ActionController::TestCase
   test "route to http_status#show" do
