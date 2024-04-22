@@ -19,7 +19,7 @@ This mock service returns static response from the file located in `src/main/res
 
 _Sample 1_
 
-**curl "http://localhost:5000/resource/100"**
+**curl "http://localhost:3000/resource/100"**
 
 will return 
 
@@ -32,7 +32,7 @@ will return
 
 _Sample 2_
 
-**curl "http://localhost:5000/resource/200"**
+**curl "http://localhost:3000/resource/200"**
 
 will return
 
@@ -47,7 +47,7 @@ When request with a non existing file, the response will be reading from file `e
 
 _Sample 3_
 
-**curl "http://localhost:5000/resource/300"**
+**curl "http://localhost:3000/resource/300"**
 
 
 will return
@@ -63,7 +63,7 @@ will return
 _Sample 1_
 
 
-**curl "http://localhost:5000/http_status/200"**
+**curl "http://localhost:3000/http_status/200"**
 
 
 will return status code 200 and the following response
@@ -74,7 +74,7 @@ will return status code 200 and the following response
 
 _Sample 2_
 
-**curl "http://localhost:5000/http_status/400"**
+**curl "http://localhost:3000/http_status/400"**
 
 
 will return status code 400 and the following response
@@ -91,7 +91,7 @@ will return status code 400 and the following response
 _Sample 1_
 
 
-**curl "http://localhost:5000/delay/3000"**
+**curl "http://localhost:3000/delay/3000"**
 
 
 will return response with 3000 milliseconds delay
