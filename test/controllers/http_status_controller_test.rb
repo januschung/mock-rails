@@ -22,7 +22,7 @@ class HttpStatusControllerTest < ActionController::TestCase
       get :show, params: { code: input }
       assert_response input
       json_response = JSON.parse(@response.body)
-      assert_equal code, json_response["status"] 
+      assert_equal code, json_response["status"]
     end
   end
 
@@ -39,7 +39,7 @@ class HttpStatusControllerTest < ActionController::TestCase
       get :show, params: { code: input }
       assert_response 422
       json_response = JSON.parse(@response.body)
-      assert_equal "Invalid HTTP status code", json_response["error"] 
+      assert_equal "Invalid HTTP status code", json_response["error"]
     end
   end
 
