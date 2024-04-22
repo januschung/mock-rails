@@ -1,0 +1,34 @@
+name: Rails application
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    
+    runs-on: ubuntu-latest
+    steps:  
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1.173.0
+        with:
+          ruby-version: 3.30
+      
+      - name: Install Dependencies
+        run: |
+          sudo apt install -yqq libpq-dev
+          gem install bundler
+
+      - name: Install Gems
+        run: bundle install
+
+      - name: Run unit tests
+        run: rails test
