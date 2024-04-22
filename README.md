@@ -2,10 +2,60 @@
 
 This is a simple REST mock server written with Ruby on Rails `7`.
 
+It provides sample endpoints to render output either based on static resource file or simple logic defined in the controllers.
+
 Feel free to provide feedback or feature request.
 
+#### Customize the Mock Service
+
+For the resouce endpoint, You can modify the return value by adding a new file or editing the file under `config/resource` folder.
 
 #### Available Endpoints:
+
+<details>
+<summary>/resource/[value]</summary>
+
+This mock service returns static response from the file located in `src/main/resources/data`
+
+_Sample 1_
+
+**curl "http://localhost:5000/resource/100"**
+
+will return 
+
+```console
+[
+ {"id":"100","name":"jack","age":"30"},
+ {"id":"101","name":"jill","age":"32"}
+]
+```
+
+_Sample 2_
+
+**curl "http://localhost:5000/resource/200"**
+
+will return
+
+```console
+[
+ {"id":"200","name":"tom","age":"40"},
+ {"id":"201","name":"jerry","age":"28"}
+]
+```
+
+When request with a non existing file, the response will be reading from file `empty`
+
+_Sample 3_
+
+**curl "http://localhost:5000/resource/300"**
+
+
+will return
+
+```console
+[]
+```
+</details>
 
 <details>
 <summary>/http_status/[value]</summary>
