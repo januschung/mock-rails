@@ -62,9 +62,7 @@ will return
 
 _Sample 1_
 
-
-**curl "http://localhost:3000/http_status/200"**
-
+**curl "http://localhost:5000/http_status/200"**
 
 will return status code 200 and the following response
 
@@ -90,14 +88,36 @@ will return status code 400 and the following response
 
 _Sample 1_
 
-
 **curl "http://localhost:3000/delay/3000"**
-
 
 will return response with 3000 milliseconds delay
 
 ```console
 Response with delay of 3000 milliseconds
+```
+</details>
+
+<details>
+<summary>/post/json?display_payload=[true|false]</summary>
+
+_Sample 1_
+
+**curl -X POST 'http://localhost:3000/post/json?display_payload=true' -H "Content-Type: application/json" -d '{"key": "value"}'n**
+
+will return the payload and the duration of the request
+
+```console
+{"payload":{"key":"value"},"duration":"0.0 seconds"}
+```
+
+_Sample 2_
+
+**curl -X POST 'http://localhost:3000/post/json?display_payload=false' -H "Content-Type: application/json" -d '{"key": "value"}'n**
+
+will return the payload and the duration of the request
+
+```console
+{"duration":"0.0 seconds"}
 ```
 </details>
 
