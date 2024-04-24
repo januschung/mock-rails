@@ -102,7 +102,7 @@ Response with delay of 3000 milliseconds
 
 _Sample 1_
 
-**curl -X POST 'http://localhost:3000/post/json?display_payload=true' -H "Content-Type: application/json" -d '{"key": "value"}'n**
+**curl -X POST 'http://localhost:3000/post/json?display_payload=true' -H "Content-Type: application/json" -d '{"key": "value"}'**
 
 will return the payload and the duration of the request
 
@@ -112,7 +112,7 @@ will return the payload and the duration of the request
 
 _Sample 2_
 
-**curl -X POST 'http://localhost:3000/post/json?display_payload=false' -H "Content-Type: application/json" -d '{"key": "value"}'n**
+**curl -X POST 'http://localhost:3000/post/json?display_payload=false' -H "Content-Type: application/json" -d '{"key": "value"}'**
 
 will return the payload and the duration of the request
 
