@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/http_status/:code', to: 'http_status#show'
   get '/delay/:ms', to: 'delay#delay'
   get '/resource/:data', to: 'resource#resource'
+  post '/post/json', to: 'post#post_json'
 
   # Defines the root path route ("/")
   # root "posts#index"
